@@ -1,0 +1,209 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Minteesinot Wubishet - Portfolio</title>
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;600&display=swap" rel="stylesheet">
+  <style>
+    :root {
+      --bg-light: #f4f4f4;
+      --bg-dark: #1e1e1e;
+      --text-light: #333;
+      --text-dark: #f4f4f4;
+      --primary: #0077b6;
+      --card-bg: #fff;
+      --card-bg-dark: #2c2c2c;
+    }
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+      transition: all 0.3s ease;
+    }
+    body {
+      font-family: 'Poppins', sans-serif;
+      background-color: var(--bg-light);
+      color: var(--text-light);
+      line-height: 1.6;
+    }
+    body.dark {
+      background-color: var(--bg-dark);
+      color: var(--text-dark);
+    }
+    header {
+      background: var(--primary);
+      color: #fff;
+      padding: 2rem 1rem;
+      text-align: center;
+      opacity: 0;
+      animation: fadeIn 1s forwards;
+    }
+    header h1 { font-size: 2.5rem; }
+    header p { font-size: 1.2rem; }
+    section {
+      padding: 2rem 1rem;
+      max-width: 900px;
+      margin: auto;
+      opacity: 0;
+      animation: fadeInUp 1s forwards;
+      animation-delay: 0.3s;
+    }
+    .section-title {
+      font-size: 2rem;
+      margin-bottom: 1rem;
+      color: var(--primary);
+    }
+    .skills ul {
+      list-style: none;
+      display: flex;
+      flex-wrap: wrap;
+      gap: 1rem;
+    }
+    .skills li {
+      background: var(--primary);
+      color: #fff;
+      padding: 0.5rem 1rem;
+      border-radius: 20px;
+    }
+    .project {
+      background: var(--card-bg);
+      padding: 1rem;
+      border-left: 4px solid var(--primary);
+      margin-bottom: 1rem;
+      border-radius: 5px;
+      box-shadow: 0 2px 5px rgba(0,0,0,0.05);
+    }
+    body.dark .project {
+      background: var(--card-bg-dark);
+    }
+    .contact a {
+      color: var(--primary);
+      display: block;
+      margin-bottom: 0.5rem;
+    }
+    .contact-form {
+      margin-top: 2rem;
+    }
+    .contact-form input,
+    .contact-form textarea {
+      width: 100%;
+      padding: 0.75rem;
+      margin-bottom: 1rem;
+      border: 1px solid #ccc;
+      border-radius: 5px;
+      font-size: 1rem;
+    }
+    .contact-form button {
+      background-color: var(--primary);
+      color: white;
+      border: none;
+      padding: 0.75rem 1.5rem;
+      font-size: 1rem;
+      border-radius: 5px;
+      cursor: pointer;
+    }
+    .contact-form button:hover {
+      background-color: #005f87;
+    }
+    footer {
+      text-align: center;
+      padding: 1rem;
+      background: #eee;
+      margin-top: 2rem;
+    }
+    body.dark footer {
+      background: #111;
+    }
+    .dark-toggle {
+      position: fixed;
+      top: 10px;
+      right: 20px;
+      background: var(--primary);
+      color: white;
+      border: none;
+      padding: 0.5rem 1rem;
+      border-radius: 20px;
+      cursor: pointer;
+      z-index: 1000;
+    }
+
+    @keyframes fadeIn {
+      from { opacity: 0; }
+      to { opacity: 1; }
+    }
+
+    @keyframes fadeInUp {
+      from { opacity: 0; transform: translateY(20px); }
+      to { opacity: 1; transform: translateY(0); }
+    }
+  </style>
+</head>
+<body>
+  <button class="dark-toggle" onclick="toggleDarkMode()">Toggle Dark Mode</button>
+  <header>
+    <h1>Minteesinot Wubishet</h1>
+    <p>Computer Science Student</p>
+  </header>
+
+  <section class="about">
+    <h2 class="section-title">About Me</h2>
+    <p>
+      I'm Minteesinot Wubishet, a passionate and motivated second-year Computer Science student with a strong interest in full-stack web development. I'm currently sharpening my skills in HTML, CSS, JavaScript, and Java, while also exploring backend tools like MySQL and Git. My goal is to build modern, responsive, and impactful web applications that solve real-world problems. I'm eager to grow, collaborate, and contribute to the tech community.
+    </p>
+  </section>
+
+  <section class="skills">
+    <h2 class="section-title">Skills</h2>
+    <ul>
+      <li>HTML</li>
+      <li>CSS</li>
+      <li>JavaScript</li>
+      <li>Java</li>
+      <li>C++</li>
+      <li>Git</li>
+      <li>MySQL</li>
+    </ul>
+  </section>
+
+  <section class="projects">
+    <h2 class="section-title">Projects</h2>
+    <div class="project">
+      <h3>Portfolio Website</h3>
+      <p>A simple responsive personal portfolio built with HTML and CSS.</p>
+      <p><strong>Technologies:</strong> HTML, CSS</p>
+    </div>
+    <div class="project">
+      <h3>Student Record System (Java)</h3>
+      <p>A basic Java app to manage student information using OOP concepts.</p>
+      <p><strong>Technologies:</strong> Java</p>
+    </div>
+  </section>
+
+  <section class="contact">
+    <h2 class="section-title">Contact</h2>
+    <a href="mailto:mintewubishet@gmail.com">mintewubishet@gmail.com</a>
+    <a href="https://github.com/minte-24" target="_blank">GitHub: minte-24</a>
+    <a href="https://t.me/Minte84" target="_blank">Telegram: @Minte84</a>
+
+    <div class="contact-form">
+      <form action="https://formspree.io/f/mwkgbqbo" method="POST">
+        <input type="text" name="name" placeholder="Your Name" required>
+        <input type="email" name="email" placeholder="Your Email" required>
+        <textarea name="message" rows="5" placeholder="Your Message" required></textarea>
+        <button type="submit">Send Message</button>
+      </form>
+    </div>
+  </section>
+
+  <footer>
+    <p>&copy; 2025 Minteesinot Wubishet. All rights reserved.</p>
+  </footer>
+
+  <script>
+    function toggleDarkMode() {
+      document.body.classList.toggle('dark');
+    }
+  </script>
+</body>
+</html>
